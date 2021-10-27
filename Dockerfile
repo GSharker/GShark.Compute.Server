@@ -6,7 +6,7 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["GShark.Compute.Server.Api/GShark.Compute.Server.Api.csproj", "GShark.Compute.Server.Api/"]
+COPY ["/src/GShark.Compute.Server.Api/GShark.Compute.Server.Api.csproj", "GShark.Compute.Server.Api/"]
 RUN dotnet restore "GShark.Compute.Server.Api/GShark.Compute.Server.Api.csproj"
 COPY . .
 WORKDIR "/src/GShark.Compute.Server.Api"
